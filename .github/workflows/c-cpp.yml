@@ -34,6 +34,8 @@ jobs:
       run: |
         git config --global user.name 'AWAH-SIP_CI'
         git config --global user.email 'AWAH-SIP@users.noreply.github.com'
+        git rm --cached linux_x86-64/include/\*
+        git rm --cached linux_x86-64/lib/\*
         git add linux_x86-64/\*
         git commit -m "Github Actions updated PJSIP-Libraries for linux_x86-64"
         git push
@@ -64,6 +66,8 @@ jobs:
       run: |
         git config --global user.name 'AWAH-SIP_CI'
         git config --global user.email 'AWAH-SIP@users.noreply.github.com'
+        git rm --cached mac_x86-64/include/\*
+        git rm --cached mac_x86-64/lib/\*
         git add mac_x86-64/\*
         git commit -m "Github Actions updated PJSIP-Libraries for mac_x86-64"
         git push
@@ -75,7 +79,7 @@ jobs:
       with:
         submodules: recursive
     - name: get openssl
-      run: Invoke-WebRequest -Uri "https://mirror.firedaemon.com/OpenSSL/openssl-1.1.1e-dev.zip" -OutFile ".\openssl.zip"
+      run: Invoke-WebRequest -Uri "https://mirror.firedaemon.com/OpenSSL/openssl-1.1.1l-dev.zip" -OutFile ".\openssl.zip"
       shell: powershell
     - name: expand openssl
       run: |
