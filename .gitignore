@@ -1,13 +1,7 @@
-# C++ objects and libs
+# C++ objects
 *.slo
 *.lo
 *.o
-*.a
-*.la
-*.lai
-*.so
-*.dll
-*.dylib
 
 #VS-Code
 .vscode
