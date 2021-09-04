@@ -1,18 +1,9 @@
 # PJSIP include for Linux x86-64
 
-INCLUDEPATH += $$PWD/pjproject-2.10/pjsip/include \
-            $$PWD/pjproject-2.10/pjlib/include \
-            $$PWD/pjproject-2.10/pjlib-util/include \
-            $$PWD/pjproject-2.10/pjmedia/include \
-            $$PWD/pjproject-2.10/pjnath/include
+INCLUDEPATH += $$PWD/include 
 
     LIBS += \
-            -L$$PWD/pjproject-2.10/pjlib/lib \
-            -L$$PWD/pjproject-2.10/pjlib-util/lib \
-            -L$$PWD/pjproject-2.10/pjnath/lib \
-            -L$$PWD/pjproject-2.10/pjmedia/lib \
-            -L$$PWD/pjproject-2.10/pjsip/lib \
-            -L$$PWD/pjproject-2.10/third_party/lib            \
+            -L$$PWD/lib \
             -lpjsua2-x86_64-unknown-linux-gnu \
             -lstdc++ \
             -lpjsua-x86_64-unknown-linux-gnu \

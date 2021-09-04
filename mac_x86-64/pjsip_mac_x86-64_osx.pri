@@ -1,18 +1,9 @@
 # PJSIP include for MacOS x86-64
 
-INCLUDEPATH += $$PWD/pjproject-2.10_osx_aac/pjsip/include \
-            $$PWD/pjproject-2.10_osx_aac/pjlib/include \
-            $$PWD/pjproject-2.10_osx_aac/pjlib-util/include \
-            $$PWD/pjproject-2.10_osx_aac/pjmedia/include \
-            $$PWD/pjproject-2.10_osx_aac/pjnath/include
+INCLUDEPATH += $$PWD/include
 
     LIBS += \
-            -L$$PWD/pjproject-2.10_osx_aac/pjlib/lib \
-            -L$$PWD/pjproject-2.10_osx_aac/pjlib-util/lib \
-            -L$$PWD/pjproject-2.10_osx_aac/pjnath/lib \
-            -L$$PWD/pjproject-2.10_osx_aac/pjmedia/lib \
-            -L$$PWD/pjproject-2.10_osx_aac/pjsip/lib \
-            -L$$PWD/pjproject-2.10_osx_aac/third_party/lib \
+            -L$$PWD/lib \
             -L/usr/local/Cellar/opus/1.3.1/lib \
             -lpjsua2-x86_64-apple-darwin20.3.0 \
             -lstdc++ \
