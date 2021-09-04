@@ -8,3 +8,5 @@
 *.so
 *.dll
 *.dylib
+
+*.DS_Store
