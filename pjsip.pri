@@ -19,4 +19,11 @@ win32 {
     include(win_x86-64/pjsip_win_x86-64.pri)
 }
 
-OTHER_FILES +=
+OTHER_FILES += \
+    $$PWD/pjproject/pjsip/src/pjsip/* \
+    $$PWD/pjproject/pjsip/src/pjsip-simple/* \
+    $$PWD/pjproject/pjsip/src/pjsip-ua/* \
+    $$PWD/pjproject/pjsip/src/pjsua-lib/* \
+    $$PWD/pjproject/pjsip/src/pjsua2/* \
+    $$PWD/pjproject/pjmedia/src/pjmedia-codec/* \
+    $$PWD/pjproject/pjmedia/src/pjmedia/*
