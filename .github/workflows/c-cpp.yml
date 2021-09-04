@@ -122,11 +122,11 @@ jobs:
       shell: powershell
     - name: copy Assets
       run: |
-        		mkdir win_x86-64\lib -Force
-		        mkdir win_x86-64\include -Force
-		        Copy-Item -Path pjproject\pjsip\include\*,pjproject\pjlib\include\*,pjproject\pjlib-util\include\*,pjproject\pjmedia\include\*,pjproject\pjnath\include\*,pjproject\include\* -Destination win_x86-64\include -Recurse
-		        Copy-Item -Path pjproject\lib\*.lib,pjproject\pjlib\lib\*.lib,pjproject\pjlib-util\lib\*.lib,pjproject\pjnath\lib\*.lib,pjproject\pjmedia\lib\*.lib,pjproject\pjsip\lib\*.lib,pjproject\third_party\lib\*.lib -Destination win_x86-64\lib -Recurse
-            Tree /F win_x86-64
+	md win_x86-64\lib -Force | Out-Null
+	md win_x86-64\include -Force | Out-Null
+	Copy-Item -Path pjproject\pjsip\include\*,pjproject\pjlib\include\*,pjproject\pjlib-util\include\*,pjproject\pjmedia\include\*,pjproject\pjnath\include\*,pjproject\include\* -Destination win_x86-64\include -Recurse
+	Copy-Item -Path pjproject\lib\*.lib,pjproject\pjlib\lib\*.lib,pjproject\pjlib-util\lib\*.lib,pjproject\pjnath\lib\*.lib,pjproject\pjmedia\lib\*.lib,pjproject\pjsip\lib\*.lib,pjproject\third_party\lib\*.lib -Destination win_x86-64\lib -Recurse
+	Tree /F win_x86-64
       shell: powershell
     - name: Commit Libs
       continue-on-error: true
