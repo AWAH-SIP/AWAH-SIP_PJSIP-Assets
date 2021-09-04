@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        submodules: recursive
     - name: install dependencies
       run: sudo apt-get install -y libopencore-amrnb-dev libopus-dev
     - name: configure
