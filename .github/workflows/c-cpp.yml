@@ -77,15 +77,18 @@ jobs:
       with:
         submodules: recursive
     - name: get openssl
+      working-directory: ./pjproject
       run: Invoke-WebRequest -Uri "https://mirror.firedaemon.com/OpenSSL/openssl-1.1.1l-dev.zip" -OutFile ".\openssl.zip"
       shell: powershell
     - name: expand openssl
+      working-directory: ./pjproject
       run: |
         Expand-Archive -LiteralPath .\openssl.zip -DestinationPath .\openssl_build\; pwd
         cd openssl_build\openssl-1.1\x86
         Add-Content ..\..\..\openssl_dir.txt $pwd.Path
       shell: powershell
     - name: check openssl folder
+      working-directory: ./pjproject
       run: |
         set /P OPENSSL_DIR=<openssl_dir.txt
         dir "%OPENSSL_DIR%\include"
