@@ -31,11 +31,10 @@ jobs:
       working-directory: ./pjproject
       run: make install
     - name: Commit report
+      continue-on-error: true
       run: |
         git config --global user.name 'AWAH-SIP_CI'
         git config --global user.email 'AWAH-SIP@users.noreply.github.com'
-        git rm --cached linux_x86-64/include/\*
-        git rm --cached linux_x86-64/lib/\*
         git add linux_x86-64/\*
         git commit -m "Github Actions updated PJSIP-Libraries for linux_x86-64"
         git push
@@ -63,11 +62,10 @@ jobs:
       working-directory: ./pjproject
       run: make install
     - name: Commit report
+      continue-on-error: true
       run: |
         git config --global user.name 'AWAH-SIP_CI'
         git config --global user.email 'AWAH-SIP@users.noreply.github.com'
-        git rm --cached mac_x86-64/include/\*
-        git rm --cached mac_x86-64/lib/\*
         git add mac_x86-64/\*
         git commit -m "Github Actions updated PJSIP-Libraries for mac_x86-64"
         git push
