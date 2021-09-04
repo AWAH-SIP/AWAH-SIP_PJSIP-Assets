@@ -25,7 +25,24 @@ jobs:
 #    - name: unit tests
 #      working-directory: ./pjproject
 #      run: make pjsip-test
+    - name: delete previous lib
+      continue-on-error: true
+      run: |
+        rm -r linux_x86-64/lib
+        rm -r linux_x86-64/include
     - name: make install
       working-directory: ./pjproject
       run: make install
+    - name: Commit report
+      run: |
+        git config --global user.name 'AWAH-SIP_CI'
+        git config --global user.email 'AWAH-SIP@users.noreply.github.com'
+        git add linux_x86-64/\*
+        git commit -m "Github Actions updated PJSIP-Libraries for linux_x86-64"
+        git push
+#    - name: Upload a Build Artifact
+#      uses: actions/upload-artifact@v2.2.4
+#      with:
+#        name: linux_x86-64_Assets
+#        path: linux_x86-64/*
 
