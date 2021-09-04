@@ -26,6 +26,7 @@ jobs:
 #      working-directory: ./pjproject
 #      run: make pjsip-test
     - name: delete previous lib
+      continue-on-error: true
       run: |
         rm -r linux_x86-64/lib
         rm -r linux_x86-64/include
