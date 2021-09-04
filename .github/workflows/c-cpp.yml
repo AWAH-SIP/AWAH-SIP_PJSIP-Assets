@@ -30,7 +30,7 @@ jobs:
     - name: make install
       working-directory: ./pjproject
       run: make install
-    - name: Commit report
+    - name: Commit Libs
       continue-on-error: true
       run: |
         git config --global user.name 'AWAH-SIP_CI'
