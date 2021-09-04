@@ -15,16 +15,16 @@ jobs:
       with:
         submodules: recursive
     - name: install dependencies
-      run: sudo apt-get install -y libopencore-amrnb-dev libopus-dev
+      run: sudo apt-get install -y libopencore-amrnb-dev libopus-dev libasound2-dev
     - name: configure
       working-directory: ./pjproject
       run: ./configure --prefix=$PWD/../linux_x86-64
     - name: make
       working-directory: ./pjproject
       run: make
-    - name: unit tests
-      working-directory: ./pjproject
-      run: make pjsip-test
+#    - name: unit tests
+#      working-directory: ./pjproject
+#      run: make pjsip-test
     - name: make install
       working-directory: ./pjproject
       run: make install
