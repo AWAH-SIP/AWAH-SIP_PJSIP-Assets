@@ -28,4 +28,9 @@ jobs:
     - name: make install
       working-directory: ./pjproject
       run: make install
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        name: linux_x86-64_Assets
+        path: linux_x86-64/*
 
