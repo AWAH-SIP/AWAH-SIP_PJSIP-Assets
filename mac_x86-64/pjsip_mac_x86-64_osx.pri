@@ -1,10 +1,12 @@
 # PJSIP include for MacOS x86-64
 
-INCLUDEPATH += $$PWD/include
+INCLUDEPATH += $$PWD/include \
+                /usr/local/opt/openssl/include
 
     LIBS += \
             -L$$PWD/lib \
             -L/usr/local/Cellar/opus/1.3.1/lib \
+            -L/usr/local/opt/openssl/lib \
             -lpjsua2-x86_64-apple-darwin19.6.0 \
             -lstdc++ \
             -lpjsua-x86_64-apple-darwin19.6.0 \
