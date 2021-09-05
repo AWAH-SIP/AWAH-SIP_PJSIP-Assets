@@ -34,6 +34,8 @@ INCLUDEPATH += $$PWD/include \
             -lopus \
             -lssl \
             -lcrypto \
+            -lopencore-amrnb \
+            -lopencore-amrwb \
             -framework CoreAudio \
             -framework CoreServices \
             -framework AudioUnit \
