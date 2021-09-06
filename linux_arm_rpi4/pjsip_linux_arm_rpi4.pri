@@ -7,28 +7,28 @@ INCLUDEPATH += $$PWD/include
 
     LIBS += \
             -L$$PWD/lib \
-            -lpjsua2-armv7l-unknown-linux-gnueabihf \
+            -lpjsua2-arm-unknown-linux-gnueabihf \
             -lstdc++ \
-            -lpjsua-armv7l-unknown-linux-gnueabihf \
-            -lpjsip-ua-armv7l-unknown-linux-gnueabihf \
-            -lpjsip-simple-armv7l-unknown-linux-gnueabihf \
-            -lpjsip-armv7l-unknown-linux-gnueabihf \
-            -lpjmedia-codec-armv7l-unknown-linux-gnueabihf \
-            -lpjmedia-armv7l-unknown-linux-gnueabihf \
-            -lpjmedia-videodev-armv7l-unknown-linux-gnueabihf \
-            -lpjmedia-audiodev-armv7l-unknown-linux-gnueabihf \
-            -lpjmedia-armv7l-unknown-linux-gnueabihf \
-            -lpjnath-armv7l-unknown-linux-gnueabihf \
-            -lpjlib-util-armv7l-unknown-linux-gnueabihf  \
-            -lsrtp-armv7l-unknown-linux-gnueabihf \
-            -lresample-armv7l-unknown-linux-gnueabihf \
-            -lgsmcodec-armv7l-unknown-linux-gnueabihf \
-            -lspeex-armv7l-unknown-linux-gnueabihf \
-            -lilbccodec-armv7l-unknown-linux-gnueabihf \
-            -lg7221codec-armv7l-unknown-linux-gnueabihf \
-            -lyuv-armv7l-unknown-linux-gnueabihf \
-            -lwebrtc-armv7l-unknown-linux-gnueabihf  \
-            -lpj-armv7l-unknown-linux-gnueabihf \
+            -lpjsua-arm-unknown-linux-gnueabihf \
+            -lpjsip-ua-arm-unknown-linux-gnueabihf \
+            -lpjsip-simple-arm-unknown-linux-gnueabihf \
+            -lpjsip-arm-unknown-linux-gnueabihf \
+            -lpjmedia-codec-arm-unknown-linux-gnueabihf \
+            -lpjmedia-arm-unknown-linux-gnueabihf \
+            -lpjmedia-videodev-arm-unknown-linux-gnueabihf \
+            -lpjmedia-audiodev-arm-unknown-linux-gnueabihf \
+            -lpjmedia-arm-unknown-linux-gnueabihf \
+            -lpjnath-arm-unknown-linux-gnueabihf \
+            -lpjlib-util-arm-unknown-linux-gnueabihf  \
+            -lsrtp-arm-unknown-linux-gnueabihf \
+            -lresample-arm-unknown-linux-gnueabihf \
+            -lgsmcodec-arm-unknown-linux-gnueabihf \
+            -lspeex-arm-unknown-linux-gnueabihf \
+            -lilbccodec-arm-unknown-linux-gnueabihf \
+            -lg7221codec-arm-unknown-linux-gnueabihf \
+            -lyuv-arm-unknown-linux-gnueabihf \
+            -lwebrtc-arm-unknown-linux-gnueabihf  \
+            -lpj-arm-unknown-linux-gnueabihf \
             -lopus \
             -lssl \
             -lcrypto \
