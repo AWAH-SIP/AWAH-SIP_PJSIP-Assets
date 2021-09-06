@@ -15,10 +15,10 @@ if [ "$1" = "build" ]; then
         export CC=/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc
         export LD=/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc
         export CROSS_COMPILE=/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-
-        ./configure --host=arm-linux-gnueabihf CFLAGS="--sysroot=/sysroot" LDFLAGS="--sysroot=/sysroot" --prefix=$APP_BUILDDIR 
-		make dep
-        make -j4
-        make install
+        sudo ./configure --host=arm-linux-gnueabihf CFLAGS="--sysroot=/sysroot" LDFLAGS="--sysroot=/sysroot" --prefix=$APP_BUILDDIR 
+	sudo make dep
+        sudo make -j4
+        sudo make install
 	fi
 else
 	cd ~
