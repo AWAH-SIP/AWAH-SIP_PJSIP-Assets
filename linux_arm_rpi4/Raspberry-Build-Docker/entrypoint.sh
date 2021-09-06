@@ -6,7 +6,7 @@ if [ "$1" = "build" ]; then
 	echo "Starting to build PJSIP for RPi..."
 	# unfortunately we have to specify the actual environment var here, because passing it in via CMD does not work with environment variables: https://docs.docker.com/engine/reference/builder/#environment-replacement
 	if [ -z "$(ls -A $APP_SRCDIR)" ]; then
-		echo "Mount point /var/build is empty, did you invoke the container with \"docker run --rm -v /path/to/pjsip/project:/var/build build\"?"
+		echo "Mount point ${APP_SRCDIR} is empty, did you invoke the container with \"docker run --rm -v /path/to/pjsip/project:/var/build build\"?"
 		exit 0
 	else
 		mkdir -p $APP_BUILDDIR
