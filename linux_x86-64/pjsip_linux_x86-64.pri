@@ -27,6 +27,8 @@ INCLUDEPATH += $$PWD/include
             -lwebrtc-x86_64-unknown-linux-gnu  \
             -lpj-x86_64-unknown-linux-gnu \
             -lopus \
+            -lopencore-amrnb \
+            -lopencore-amrwb \
             -lssl \
             -lcrypto \
             -luuid \
