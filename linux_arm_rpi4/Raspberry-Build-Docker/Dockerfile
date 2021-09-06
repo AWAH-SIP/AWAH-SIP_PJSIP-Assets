@@ -191,6 +191,6 @@ RUN chmod +x ${ENTRYPOINT_DIR}/entrypoint.sh
 VOLUME ["${APP_BUILDDIR}"]
 VOLUME ["${APP_SRCDIR}"]
 
-USER ${QT_USERNAME}
+#USER ${QT_USERNAME}
 
 ENTRYPOINT ["entrypoint.sh"]

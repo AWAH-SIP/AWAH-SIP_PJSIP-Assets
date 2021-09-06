@@ -9,7 +9,6 @@ if [ "$1" = "build" ]; then
 		echo "Mount point ${APP_SRCDIR} is empty, did you invoke the container with \"docker run --rm -v /path/to/pjsip/project:/var/build build\"?"
 		exit 0
 	else
-        sudo su
 		mkdir -p $APP_BUILDDIR
 		cd $APP_SRCDIR
         export PATH=$PATH:/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin
