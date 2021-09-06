@@ -3,19 +3,10 @@
 DEFINES += PJ_IS_LITTLE_ENDIAN=1 \
            PJ_IS_BIG_ENDIAN=0
 
-INCLUDEPATH += $$PWD/pjproject-2.10/pjsip/include \
-            $$PWD/pjproject-2.10/pjlib/include \
-            $$PWD/pjproject-2.10/pjlib-util/include \
-            $$PWD/pjproject-2.10/pjmedia/include \
-            $$PWD/pjproject-2.10/pjnath/include
+INCLUDEPATH += $$PWD/include
 
     LIBS += \
-            -L$$PWD/pjproject-2.10/pjlib/lib \
-            -L$$PWD/pjproject-2.10/pjlib-util/lib \
-            -L$$PWD/pjproject-2.10/pjnath/lib \
-            -L$$PWD/pjproject-2.10/pjmedia/lib \
-            -L$$PWD/pjproject-2.10/pjsip/lib \
-            -L$$PWD/pjproject-2.10/third_party/lib            \
+            -L$$PWD/lib \
             -lpjsua2-armv7l-unknown-linux-gnueabihf \
             -lstdc++ \
             -lpjsua-armv7l-unknown-linux-gnueabihf \
@@ -41,6 +32,7 @@ INCLUDEPATH += $$PWD/pjproject-2.10/pjsip/include \
             -lopus \
             -lssl \
             -lcrypto \
+            -luuid \
             -lm \
             -lrt \
             -lpthread  \
