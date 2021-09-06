@@ -11,14 +11,10 @@ if [ "$1" = "build" ]; then
 	else
 		mkdir -p $APP_BUILDDIR
 		cd $APP_SRCDIR
-        export ARCH=arm
-        export CC=/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc
-        export LD=/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc
-        export CROSS_COMPILE=/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-
-        sudo ./configure --host=arm-linux-gnueabihf CFLAGS="--sysroot=/sysroot" LDFLAGS="--sysroot=/sysroot" --prefix=$APP_BUILDDIR 
-	sudo make dep
-        sudo make -j4
-        sudo make install
+        	sudo ./configure --host=arm-linux-gnueabihf CROSS_COMPILE="/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-" CC="/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc" LD="/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc"  CFLAGS="--sysroot=/sysroot" LDFLAGS="--sysroot=/sysroot" --prefix=$APP_BUILDDIR 
+		sudo make dep
+        	sudo make -j4
+        	sudo make install
 	fi
 else
 	cd ~
