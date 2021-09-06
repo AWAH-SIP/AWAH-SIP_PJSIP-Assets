@@ -38,6 +38,7 @@ RUN apt-get update && apt-get -y dist-upgrade && apt-get -y --no-install-recomme
 	git \
 	# bash needed for argument substitution in entrypoint
 	bash \
+	uuid uuid-dev \
 	libasound2-dev \
 	libopus-dev \
 	libopencore-amrnb-dev \
