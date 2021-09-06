@@ -166,7 +166,7 @@ jobs:
       working-directory: ./pjproject
       run: |
         docker load --input /tmp/rpi-pjsip-builder.tar
-        docker run --rm -v ./pjproject:/var/src -v ./linux_arm_rpi4:/var/build rpi-pjsip-builder
+        docker run --rm -v $PWD/pjproject:/var/src -v $PWD/linux_arm_rpi4:/var/build rpi-pjsip-builder
     - name: Commit Libs
       continue-on-error: true
       run: |
