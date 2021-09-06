@@ -163,7 +163,6 @@ jobs:
         rm -r linux_arm_rpi4/lib
         rm -r linux_arm_rpi4/include
     - name: Run Build in Container
-      working-directory: ./pjproject
       run: |
         docker load --input /tmp/rpi-pjsip-builder.tar
         echo $PWD
