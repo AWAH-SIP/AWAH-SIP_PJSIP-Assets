@@ -13,8 +13,8 @@ if [ "$1" = "build" ]; then
 		cd $APP_SRCDIR
         export PATH=$PATH:/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin
         export CPPFLAGS="-I/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/7.4.1/include -I/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/include -I/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/include -I/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/include -I/sysroot/opt/vc/include -I/sysroot/usr/lib/gcc/arm-linux-gnueabihf/8/include -I/sysroot/usr/include"
-        sudo printenv
-        sudo ./configure --host=arm-linux-gnueabihf CROSS_COMPILE="/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-" CC="/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc" LD="/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc"  CFLAGS="--sysroot=/sysroot" LDFLAGS="-L/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/lib -L/sysroot/lib/arm-linux-gnueabihf/ -ldl -lc  --sysroot=/sysroot" CPPFLAGS="" --prefix=$APP_BUILDDIR 
+        printenv
+        ./configure --host=arm-linux-gnueabihf CROSS_COMPILE="/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-" CC="/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc" LD="/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc"  CFLAGS="--sysroot=/sysroot" LDFLAGS="-L/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/lib -L/sysroot/lib/arm-linux-gnueabihf/ -ldl -lc  --sysroot=/sysroot" CPPFLAGS="" --prefix=$APP_BUILDDIR 
 		sudo make dep
         sudo make -j4
         sudo make install
