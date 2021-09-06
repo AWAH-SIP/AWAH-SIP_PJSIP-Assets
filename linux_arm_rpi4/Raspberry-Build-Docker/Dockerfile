@@ -41,6 +41,7 @@ RUN apt-get update && apt-get -y dist-upgrade && apt-get -y --no-install-recomme
 	uuid uuid-dev \
 	libasound2-dev \
 	libopus-dev \
+	libopencore-amrwb-dev \
 	libopencore-amrnb-dev \
 	&& apt-get -qq clean \
 	&& rm -rf /var/lib/apt/lists/* \
@@ -106,6 +107,7 @@ RUN apt-get update && apt-get -y dist-upgrade && apt-get -y --no-install-recomme
 	bash \
 	libasound2-dev \
 	libopus-dev \
+	libopencore-amrwb-dev \
 	libopencore-amrnb-dev \
 	wget \
 	rsync \

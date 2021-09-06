@@ -11,6 +11,9 @@ if [ "$1" = "build" ]; then
 	else
 		mkdir -p $APP_BUILDDIR
 		cd $APP_SRCDIR
+        sed -e '/ifneq ($(findstring sse2,@ac_webrtc_instset@),)/,+8d' third_party/build/os-auto.mak.in
+        sed -e '/ifneq ($(findstring sse2,@ac_webrtc_instset@),)/,+17d' third_party/build/os-auto.mak.in
+        cat third_party/build/os-auto.mak.in
         export PATH=$PATH:/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin
         export CPPFLAGS="-I/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/7.4.1/include -I/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/include -I/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/include -I/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/include -I/sysroot/opt/vc/include -I/sysroot/usr/lib/gcc/arm-linux-gnueabihf/8/include -I/sysroot/usr/include"
         printenv
