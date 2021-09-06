@@ -154,6 +154,9 @@ jobs:
         context: ./linux_arm_rpi4/Raspberry-Build-Docker
         push: false
         tags: rpi-pjsip-builder:latest
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+        outputs: type=docker,dest=/tmp/rpi-pjsip-builder.tar
     - name: delete previous lib
       continue-on-error: true
       run: |
@@ -161,7 +164,9 @@ jobs:
         rm -r linux_arm_rpi4/include
     - name: Run Build in Container
       working-directory: ./pjproject
-      run: docker run --rm -v ./pjproject:/var/src -v ./linux_arm_rpi4:/var/build rpi-pjsip-builder
+      run: |
+        docker load --input /tmp/rpi-pjsip-builder.tar
+        docker run --rm -v ./pjproject:/var/src -v ./linux_arm_rpi4:/var/build rpi-pjsip-builder
     - name: Commit Libs
       continue-on-error: true
       run: |
