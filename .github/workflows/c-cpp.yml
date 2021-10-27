@@ -98,7 +98,7 @@ jobs:
       shell: cmd
     - name: config site
       run:
-        cd pjproject/pjlib/include/pj; Add-Content config_site.h "#define PJ_HAS_SSL_SOCK 1"; Add-Content config_site.h "#define PJMEDIA_HAS_OPUS_CODEC=1"
+        cd pjproject/pjlib/include/pj; Add-Content config_site.h "`r`n#define PJ_HAS_SSL_SOCK 1`r`n#define PJMEDIA_HAS_OPUS_CODEC=1"
       shell: powershell
     - name: check VsDevCmd.bat
       run: dir "%PROGRAMFILES(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsall.bat"
