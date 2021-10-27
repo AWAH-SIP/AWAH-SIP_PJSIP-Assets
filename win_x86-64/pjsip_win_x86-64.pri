@@ -1,8 +1,7 @@
 # PJSIP include for Windows x86-64
 
-#    DEFINES     +=  PJ_WIN32=1 \
-#                    PJMEDIA_HAS_OPUS_CODEC=1
-#
+    DEFINES     +=  PJMEDIA_HAS_OPUS_CODEC=1
+
     QMAKE_LFLAGS  += " /NODEFAULTLIB:LIBCMT "
 
     INCLUDEPATH += $$PWD/include \
