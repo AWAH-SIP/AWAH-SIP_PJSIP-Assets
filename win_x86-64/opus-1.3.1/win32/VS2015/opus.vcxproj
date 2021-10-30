@@ -156,9 +156,12 @@
     <Import Project="common.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetExt>.a</TargetExt>
+  </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>..\..\silk\fixed;..\..\silk\float;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\include\opus;..\..\include\opus;..\..\silk\fixed;..\..\silk\float;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions Condition="'$(ConfigurationType)'=='DynamicLibrary'">DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PreprocessorDefinitions Condition="'$(Configuration)'=='DebugDLL_fixed' or '$(Configuration)'=='ReleaseDLL_fixed'">FIXED_POINT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions Condition="'$(Platform)'=='Win32'">/arch:IA32 %(AdditionalOptions)</AdditionalOptions>
