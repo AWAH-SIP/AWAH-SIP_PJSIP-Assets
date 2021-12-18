@@ -159,6 +159,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetExt>.a</TargetExt>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>..\..\include\opus;..\..\include\opus;..\..\silk\fixed;..\..\silk\float;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
