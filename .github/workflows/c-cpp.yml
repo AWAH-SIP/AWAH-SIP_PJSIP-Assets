@@ -80,7 +80,7 @@ jobs:
         submodules: recursive
     - name: get openssl
       working-directory: ./pjproject
-      run: Invoke-WebRequest -Uri "https://mirror.firedaemon.com/OpenSSL/openssl-1.1.1l-dev.zip" -OutFile ".\openssl.zip"
+      run: Invoke-WebRequest -Uri "https://mirror.firedaemon.com/OpenSSL/openssl-1.1.1l.zip" -OutFile ".\openssl.zip"
       shell: powershell
     - name: expand openssl
       working-directory: ./pjproject
@@ -108,8 +108,12 @@ jobs:
       run: |
         set /P OPENSSL_DIR=<openssl_dir.txt
         call "%PROGRAMFILES(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" x64
-        set INCLUDE=%INCLUDE%;%OPENSSL_DIR%\include;%cd%\..\win_x86-64\opus-1.3.1\include
-        set LIB=%LIB%;%OPENSSL_DIR%\lib;%cd%\..\win_x86-64\opus-1.3.1\win32\VS2015\x64\Release
+        echo %INCLUDE%
+        set INCLUDE="%INCLUDE%;%OPENSSL_DIR%\include;%cd%\..\win_x86-64\opus-1.3.1\include"
+        echo %INCLUDE%
+        echo %LIB%
+        set LIB="%LIB%;%OPENSSL_DIR%\lib;%cd%\..\win_x86-64\opus-1.3.1\win32\VS2015\x64\Release"
+        echo %LIB%
         set PJMEDIA_HAS_OPUS_CODEC=1
         msbuild pjproject-vs14.sln /p:PlatformToolset=v142 /p:Configuration=Release /p:Platform=x64 /p:UseEnv=true
       shell: cmd
