@@ -9,29 +9,29 @@
 
     LIBS        += \
                 -L$$PWD/lib \
-                -L$$PWD/opus-1.3.1/win32/VS2015/x64/Release \
-                -llibpjproject-x86_64-x64-vc14-Release \
-                -lpjsua2-lib-x86_64-x64-vc14-Release \
-                -lpjsua-lib-x86_64-x64-vc14-Release \
-                -lpjsip-ua-x86_64-x64-vc14-Release \
-                -lpjsip-simple-x86_64-x64-vc14-Release \
-                -lpjsip-core-x86_64-x64-vc14-Release \
-                -lpjmedia-codec-x86_64-x64-vc14-Release \
-                -lpjmedia-x86_64-x64-vc14-Release \
-                -lpjmedia-videodev-x86_64-x64-vc14-Release \
-                -lpjmedia-audiodev-x86_64-x64-vc14-Release \
-                -lpjmedia-x86_64-x64-vc14-Release \
-                -lpjnath-x86_64-x64-vc14-Release \
-                -lpjlib-util-x86_64-x64-vc14-Release \
-                -llibsrtp-x86_64-x64-vc14-Release \
-                -llibresample-x86_64-x64-vc14-Release \
-                -llibgsmcodec-x86_64-x64-vc14-Release \
-                -llibspeex-x86_64-x64-vc14-Release \
-                -llibilbccodec-x86_64-x64-vc14-Release \
-                -llibg7221codec-x86_64-x64-vc14-Release \
-                -llibyuv-x86_64-x64-vc14-Release \
-                -llibwebrtc-x86_64-x64-vc14-Release \
-                -lpjlib-x86_64-x64-vc14-Release \
+                -L$$PWD/opus-1.3.1/win32/VS2015/Win32/Release \
+                -llibpjproject-i386-Win32-vc14-Release \
+                -lpjsua2-lib-i386-Win32-vc14-Release \
+                -lpjsua-lib-i386-Win32-vc14-Release \
+                -lpjsip-ua-i386-Win32-vc14-Release \
+                -lpjsip-simple-i386-Win32-vc14-Release \
+                -lpjsip-core-i386-Win32-vc14-Release \
+                -lpjmedia-codec-i386-Win32-vc14-Release \
+                -lpjmedia-i386-Win32-vc14-Release \
+                -lpjmedia-videodev-i386-Win32-vc14-Release \
+                -lpjmedia-audiodev-i386-Win32-vc14-Release \
+                -lpjmedia-i386-Win32-vc14-Release \
+                -lpjnath-i386-Win32-vc14-Release \
+                -lpjlib-util-i386-Win32-vc14-Release \
+                -llibsrtp-i386-Win32-vc14-Release \
+                -llibresample-i386-Win32-vc14-Release \
+                -llibgsmcodec-i386-Win32-vc14-Release \
+                -llibspeex-i386-Win32-vc14-Release \
+                -llibilbccodec-i386-Win32-vc14-Release \
+                -llibg7221codec-i386-Win32-vc14-Release \
+                -llibyuv-i386-Win32-vc14-Release \
+                -llibwebrtc-i386-Win32-vc14-Release \
+                -lpjlib-i386-Win32-vc14-Release \
                 -lopus \
                 -lwinmm \
                 -lole32 \
