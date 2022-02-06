@@ -2,7 +2,8 @@
 
     DEFINES     +=  PJMEDIA_HAS_OPUS_CODEC=1
 
-    QMAKE_LFLAGS  += " /NODEFAULTLIB:LIBCMT "
+    Release:QMAKE_LFLAGS  += " /NODEFAULTLIB:LIBCMT "
+    Debug:QMAKE_LFLAGS  += " /NODEFAULTLIB:LIBCMTD "
 
     INCLUDEPATH += $$PWD/include \
                 $$PWD/opus-1.3.1/include \
@@ -47,28 +48,28 @@
             -L$$PWD/lib \
             -L$$PWD/opus-1.3.1/win32/VS2015/Win32/Debug \
             -L$$PWD/openssl-1.1/x86/lib \
-            -llibpjproject-i386-Win32-vc14-Debug \
-            -lpjsua2-lib-i386-Win32-vc14-Debug \
-            -lpjsua-lib-i386-Win32-vc14-Debug \
-            -lpjsip-ua-i386-Win32-vc14-Debug \
-            -lpjsip-simple-i386-Win32-vc14-Debug \
-            -lpjsip-core-i386-Win32-vc14-Debug \
-            -lpjmedia-codec-i386-Win32-vc14-Debug \
-            -lpjmedia-i386-Win32-vc14-Debug \
-            -lpjmedia-videodev-i386-Win32-vc14-Debug \
-            -lpjmedia-audiodev-i386-Win32-vc14-Debug \
-            -lpjmedia-i386-Win32-vc14-Debug \
-            -lpjnath-i386-Win32-vc14-Debug \
-            -lpjlib-util-i386-Win32-vc14-Debug \
-            -llibsrtp-i386-Win32-vc14-Debug \
-            -llibresample-i386-Win32-vc14-Debug \
-            -llibgsmcodec-i386-Win32-vc14-Debug \
-            -llibspeex-i386-Win32-vc14-Debug \
-            -llibilbccodec-i386-Win32-vc14-Debug \
-            -llibg7221codec-i386-Win32-vc14-Debug \
-            -llibyuv-i386-Win32-vc14-Debug \
-            -llibwebrtc-i386-Win32-vc14-Debug \
-            -lpjlib-i386-Win32-vc14-Debug \
+            -llibpjproject-i386-Win32-vc14-Debug-Dynamic \
+            -lpjsua2-lib-i386-Win32-vc14-Debug-Dynamic \
+            -lpjsua-lib-i386-Win32-vc14-Debug-Dynamic \
+            -lpjsip-ua-i386-Win32-vc14-Debug-Dynamic \
+            -lpjsip-simple-i386-Win32-vc14-Debug-Dynamic \
+            -lpjsip-core-i386-Win32-vc14-Debug-Dynamic \
+            -lpjmedia-codec-i386-Win32-vc14-Debug-Dynamic \
+            -lpjmedia-i386-Win32-vc14-Debug-Dynamic \
+            -lpjmedia-videodev-i386-Win32-vc14-Debug-Dynamic \
+            -lpjmedia-audiodev-i386-Win32-vc14-Debug-Dynamic \
+            -lpjmedia-i386-Win32-vc14-Debug-Dynamic \
+            -lpjnath-i386-Win32-vc14-Debug-Dynamic \
+            -lpjlib-util-i386-Win32-vc14-Debug-Dynamic \
+            -llibsrtp-i386-Win32-vc14-Debug-Dynamic \
+            -llibresample-i386-Win32-vc14-Debug-Dynamic \
+            -llibgsmcodec-i386-Win32-vc14-Debug-Dynamic \
+            -llibspeex-i386-Win32-vc14-Debug-Dynamic \
+            -llibilbccodec-i386-Win32-vc14-Debug-Dynamic \
+            -llibg7221codec-i386-Win32-vc14-Debug-Dynamic \
+            -llibyuv-i386-Win32-vc14-Debug-Dynamic \
+            -llibwebrtc-i386-Win32-vc14-Debug-Dynamic \
+            -lpjlib-i386-Win32-vc14-Debug-Dynamic \
             -lopus \
             -llibssl \
             -llibcrypto \
