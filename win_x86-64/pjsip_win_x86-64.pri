@@ -35,7 +35,7 @@
                 -llibyuv-i386-Win32-vc14-Release \
                 -llibwebrtc-i386-Win32-vc14-Release \
                 -lpjlib-i386-Win32-vc14-Release \
-                -lopus \
+                -llibopus \
                 -llibssl \
                 -llibcrypto \
                 -lwinmm \
@@ -70,7 +70,7 @@
             -llibyuv-i386-Win32-vc14-Debug-Dynamic \
             -llibwebrtc-i386-Win32-vc14-Debug-Dynamic \
             -lpjlib-i386-Win32-vc14-Debug-Dynamic \
-            -lopus \
+            -llibopus \
             -llibssl \
             -llibcrypto \
             -lwinmm \
