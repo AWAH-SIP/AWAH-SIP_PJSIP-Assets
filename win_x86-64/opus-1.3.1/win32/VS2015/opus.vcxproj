@@ -162,6 +162,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetExt>.a</TargetExt>
+  </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>..\..\include\opus;..\..\include\opus;..\..\silk\fixed;..\..\silk\float;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -169,9 +172,11 @@
       <PreprocessorDefinitions Condition="'$(Configuration)'=='DebugDLL_fixed' or '$(Configuration)'=='ReleaseDLL_fixed'">FIXED_POINT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions Condition="'$(Platform)'=='Win32'">/arch:IA32 %(AdditionalOptions)</AdditionalOptions>
       <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</UseFullPaths>
+      <UseFullPaths Condition="'$(Configuration)|$(Platform)'=='DebugDLL_fixed|Win32'">false</UseFullPaths>
     </ClCompile>
     <Lib>
       <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)lib$(TargetName)$(TargetExt)</OutputFile>
     </Lib>
     <PreBuildEvent>
       <Command>"$(ProjectDir)..\..\win32\genversion.bat" "$(ProjectDir)..\..\win32\version.h" PACKAGE_VERSION</Command>
