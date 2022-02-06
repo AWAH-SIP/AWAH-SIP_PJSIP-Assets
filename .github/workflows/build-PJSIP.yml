@@ -82,12 +82,17 @@ jobs:
       working-directory: ./pjproject
       run: Invoke-WebRequest -Uri "https://mirror.firedaemon.com/OpenSSL/openssl-1.1.1l.zip" -OutFile ".\openssl.zip"
       shell: powershell
+    - name: delete previous openSSL
+      continue-on-error: true
+      run: |
+        rm -r win_x86-64\openssl-1.1    
+      shell: powershell
     - name: expand openssl
       working-directory: ./pjproject
       run: |
-        Expand-Archive -LiteralPath .\openssl.zip -DestinationPath .\openssl_build\; pwd
-        cd openssl_build\openssl-1.1\x86
-        Add-Content ..\..\..\openssl_dir.txt $pwd.Path
+        Expand-Archive -LiteralPath .\openssl.zip -DestinationPath ..\win_x86-64\; pwd
+        cd ..\win_x86-64\openssl-1.1\x86
+        Add-Content ..\..\..\pjproject\openssl_dir.txt $pwd.Path
       shell: powershell
     - name: check openssl folder
       working-directory: ./pjproject
