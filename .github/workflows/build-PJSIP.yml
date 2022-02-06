@@ -85,12 +85,13 @@ jobs:
     - name: delete previous openSSL
       continue-on-error: true
       run: |
-        rm -r win_x86-64\openssl-1.1    
+        rm -r win_x86-64\openssl-1.1
+        Tree /F
       shell: powershell
     - name: expand openssl
       working-directory: ./pjproject
       run: |
-        Expand-Archive -LiteralPath .\openssl.zip -DestinationPath ..\win_x86-64\; pwd
+        Expand-Archive -LiteralPath .\openssl.zip -DestinationPath ..\win_x86-64\  -force; pwd
         cd ..\win_x86-64\openssl-1.1\x86
         Add-Content ..\..\..\pjproject\openssl_dir.txt $pwd.Path
       shell: powershell
