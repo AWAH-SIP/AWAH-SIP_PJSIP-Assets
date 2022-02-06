@@ -5,11 +5,13 @@
     QMAKE_LFLAGS  += " /NODEFAULTLIB:LIBCMT "
 
     INCLUDEPATH += $$PWD/include \
-                $$PWD/opus-1.3.1/include
+                $$PWD/opus-1.3.1/include \
+                $$PWD/openssl-1.1/x86/include
 
     LIBS        += \
                 -L$$PWD/lib \
                 -L$$PWD/opus-1.3.1/win32/VS2015/Win32/Release \
+                -L$$PWD/openssl-1.1/x86/lib \
                 -llibpjproject-i386-Win32-vc14-Release \
                 -lpjsua2-lib-i386-Win32-vc14-Release \
                 -lpjsua-lib-i386-Win32-vc14-Release \
@@ -33,6 +35,8 @@
                 -llibwebrtc-i386-Win32-vc14-Release \
                 -lpjlib-i386-Win32-vc14-Release \
                 -lopus \
+                -llibssl \
+                -llibcrypto \
                 -lwinmm \
                 -lole32 \
                 -lws2_32 \
