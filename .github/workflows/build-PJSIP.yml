@@ -130,7 +130,8 @@ jobs:
       continue-on-error: true
       run: |
         rm -r win_x86-64\lib
-        rm -r win_x86-64\include      
+        rm -r win_x86-64\include
+        Get-ChildItem -Include *.pdb -File -Recurse -ErrorAction SilentlyContinue
       shell: powershell
     - name: copy Assets
       run: |
