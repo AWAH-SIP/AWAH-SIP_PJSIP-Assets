@@ -1,7 +1,12 @@
 # QT Include File for PJSIP Library for AWAHSipLib
 macx {
-    message("include PJSIP Library for MacOS")
-    include(mac_x86-64/pjsip_mac_x86-64_osx.pri)
+    equals(M1_WITH_ROSETTA2, "1") {
+        message("include PJSIP Library for MacOS on M1 with Rosetta 2")
+        include(mac_x86-64/pjsip_mac_arm_osx.pri)
+    } else {
+        message("include PJSIP Library for MacOS intel")
+        include(mac_x86-64/pjsip_mac_x86-64_osx.pri)
+    }
 }
 
 linux-g++ {
