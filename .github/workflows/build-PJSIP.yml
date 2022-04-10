@@ -80,7 +80,7 @@ jobs:
         submodules: recursive
     - name: get openssl
       working-directory: ./pjproject
-      run: Invoke-WebRequest -Uri "https://mirror.firedaemon.com/OpenSSL/openssl-1.1.1l.zip" -OutFile ".\openssl.zip"
+      run: Invoke-WebRequest -Uri "https://mirror.firedaemon.com/OpenSSL/openssl-1.1.1n.zip" -OutFile ".\openssl.zip"
       shell: powershell
     - name: delete previous openSSL
       continue-on-error: true
