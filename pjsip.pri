@@ -2,12 +2,16 @@
 macx {
     equals(M1_WITH_ROSETTA2, "1") {
         message("include PJSIP Library for MacOS on M1 with Rosetta 2")
-        include(mac_x86-64/pjsip_mac_arm_osx.pri)
+        include(mac_x86-64/pjsip_mac_rosetta2.pri)
+    } else:equals(QMAKE_HOST.arch, "arm64") {
+        message("include PJSIP Library for MacOS on M1 native")
+        include(mac_arm/pjsip_mac_arm_osx.pri)
     } else {
         message("include PJSIP Library for MacOS intel")
         include(mac_x86-64/pjsip_mac_x86-64_osx.pri)
     }
 }
+
 
 linux-g++ {
     message("includes PJSIP Library for linux x86-64")

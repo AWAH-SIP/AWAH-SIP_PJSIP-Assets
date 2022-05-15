@@ -1,0 +1,14 @@
+# Package Information for pkg-config
+
+prefix=/Users/andy/Dropbox/ElektronikundSoft/Projects/AWAH_SIP/AWAH-SIP_Codec/awah-sip_library/pjsip/pjproject/../mac_arm
+exec_prefix=${prefix}
+libdir=/Users/andy/Dropbox/ElektronikundSoft/Projects/AWAH_SIP/AWAH-SIP_Codec/awah-sip_library/pjsip/pjproject/../mac_arm/lib
+includedir=/Users/andy/Dropbox/ElektronikundSoft/Projects/AWAH_SIP/AWAH-SIP_Codec/awah-sip_library/pjsip/pjproject/../mac_arm/include
+
+Name: libpjproject
+Description: Multimedia communication library
+URL: http://www.pjsip.org
+Version: 2.11.1
+Libs: -L/Users/andy/Dropbox/ElektronikundSoft/Projects/AWAH_SIP/AWAH-SIP_Codec/awah-sip_library/pjsip/pjproject/../mac_arm/lib -lpjsua2-arm-apple-darwin21.2.0 -lstdc++ -lpjsua-arm-apple-darwin21.2.0 -lpjsip-ua-arm-apple-darwin21.2.0 -lpjsip-simple-arm-apple-darwin21.2.0 -lpjsip-arm-apple-darwin21.2.0 -lpjmedia-codec-arm-apple-darwin21.2.0 -lpjmedia-arm-apple-darwin21.2.0 -lpjmedia-videodev-arm-apple-darwin21.2.0 -lpjmedia-audiodev-arm-apple-darwin21.2.0 -lpjmedia-arm-apple-darwin21.2.0 -lpjnath-arm-apple-darwin21.2.0 -lpjlib-util-arm-apple-darwin21.2.0 -lpj-arm-apple-darwin21.2.0
+Libs.private:  -lsrtp-arm-apple-darwin21.2.0 -lresample-arm-apple-darwin21.2.0 -lgsmcodec-arm-apple-darwin21.2.0 -lspeex-arm-apple-darwin21.2.0 -lilbccodec-arm-apple-darwin21.2.0 -lg7221codec-arm-apple-darwin21.2.0 -lyuv-arm-apple-darwin21.2.0 -lwebrtc-arm-apple-darwin21.2.0  -lopus -lssl -lcrypto -lm -lpthread  -framework CoreAudio -framework CoreServices -framework AudioUnit -framework AudioToolbox -framework Foundation -framework AppKit -framework AVFoundation -framework CoreGraphics -framework QuartzCore -framework CoreVideo -framework CoreMedia -framework VideoToolbox   -lopencore-amrnb -lopencore-amrwb
+Cflags: -I/Users/andy/Dropbox/ElektronikundSoft/Projects/AWAH_SIP/AWAH-SIP_Codec/awah-sip_library/pjsip/pjproject/../mac_arm/include -DPJ_AUTOCONF=1  -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1
