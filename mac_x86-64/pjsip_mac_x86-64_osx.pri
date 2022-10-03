@@ -6,7 +6,7 @@ INCLUDEPATH += $$PWD/include \
     LIBS += \
             -L$$PWD/lib \
             -L/usr/local/Cellar/opus/1.3.1/lib \
-            -L/usr/local/Cellar/opencore-amr/0.1.5/lib \
+            -L/usr/local/Cellar/opencore-amr/0.1.6/lib \
             -L/usr/local/opt/openssl/lib \
             -lpjsua2-x86_64-apple-darwin20.6.0 \
             -lstdc++ \
