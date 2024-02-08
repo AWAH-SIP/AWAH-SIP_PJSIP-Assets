@@ -162,7 +162,7 @@ jobs:
         submodules: recursive
     - name: Build and push
       id: docker_build
-      uses: docker/build-push-action@v3.2.0
+      uses: docker/build-push-action@v5.1.0
       with:
         context: ./linux_arm_rpi4/Raspberry-Build-Docker
         push: false
