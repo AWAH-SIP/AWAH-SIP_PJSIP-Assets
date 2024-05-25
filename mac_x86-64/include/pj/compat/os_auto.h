@@ -28,7 +28,7 @@
  */
 
 /* Canonical OS name */
-#define PJ_OS_NAME "x86_64-apple-darwin21.6.0"
+#define PJ_OS_NAME "x86_64-apple-darwin22.6.0"
 
 /* Legacy macros */
 /* #undef PJ_WIN64 */
