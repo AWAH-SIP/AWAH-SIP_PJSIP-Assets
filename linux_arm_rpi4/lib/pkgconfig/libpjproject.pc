@@ -8,7 +8,7 @@ includedir=/var/build/include
 Name: libpjproject
 Description: Multimedia communication library
 URL: http://www.pjsip.org
-Version: 2.11.1
-Libs: -L/var/build/lib -lpjsua2-arm-unknown-linux-gnueabihf -lstdc++ -lpjsua-arm-unknown-linux-gnueabihf -lpjsip-ua-arm-unknown-linux-gnueabihf -lpjsip-simple-arm-unknown-linux-gnueabihf -lpjsip-arm-unknown-linux-gnueabihf -lpjmedia-codec-arm-unknown-linux-gnueabihf -lpjmedia-arm-unknown-linux-gnueabihf -lpjmedia-videodev-arm-unknown-linux-gnueabihf -lpjmedia-audiodev-arm-unknown-linux-gnueabihf -lpjmedia-arm-unknown-linux-gnueabihf -lpjnath-arm-unknown-linux-gnueabihf -lpjlib-util-arm-unknown-linux-gnueabihf -lpj-arm-unknown-linux-gnueabihf
+Version: 2.14.1
+Libs: -L/var/build/lib -lpjsua2-arm-unknown-linux-gnueabihf -lstdc++ -lpjsua-arm-unknown-linux-gnueabihf -lpjsip-ua-arm-unknown-linux-gnueabihf -lpjsip-simple-arm-unknown-linux-gnueabihf -lpjsip-arm-unknown-linux-gnueabihf -lpjmedia-codec-arm-unknown-linux-gnueabihf -lpjmedia-videodev-arm-unknown-linux-gnueabihf -lpjmedia-audiodev-arm-unknown-linux-gnueabihf -lpjmedia-arm-unknown-linux-gnueabihf -lpjnath-arm-unknown-linux-gnueabihf -lpjlib-util-arm-unknown-linux-gnueabihf -lpj-arm-unknown-linux-gnueabihf
 Libs.private:  -lsrtp-arm-unknown-linux-gnueabihf -lresample-arm-unknown-linux-gnueabihf -lgsmcodec-arm-unknown-linux-gnueabihf -lspeex-arm-unknown-linux-gnueabihf -lilbccodec-arm-unknown-linux-gnueabihf -lg7221codec-arm-unknown-linux-gnueabihf -lyuv-arm-unknown-linux-gnueabihf -lwebrtc-arm-unknown-linux-gnueabihf  -lopus -luuid -lm -lrt -lpthread  -lasound
 Cflags: -I/var/build/include -DPJ_AUTOCONF=1  -DPJ_IS_BIG_ENDIAN=0 -DPJ_IS_LITTLE_ENDIAN=1
