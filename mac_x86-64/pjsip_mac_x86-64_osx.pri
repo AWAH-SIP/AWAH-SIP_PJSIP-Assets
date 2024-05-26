@@ -8,28 +8,28 @@ INCLUDEPATH += $$PWD/include \
             -L/usr/local/Cellar/opus/1.5.2/lib \
             -L/usr/local/Cellar/opencore-amr/0.1.6/lib \
             -L/usr/local/opt/openssl/lib \
-            -lpjsua2-x86_64-apple-darwin21.6.0 \
+            -lpjsua2-x86_64-apple-darwin22.6.0 \
             -lstdc++ \
-            -lpjsua-x86_64-apple-darwin21.6.0 \
-            -lpjsip-ua-x86_64-apple-darwin21.6.0 \
-            -lpjsip-simple-x86_64-apple-darwin21.6.0 \
-            -lpjsip-x86_64-apple-darwin21.6.0 \
-            -lpjmedia-codec-x86_64-apple-darwin21.6.0 \
-            -lpjmedia-x86_64-apple-darwin21.6.0 \
-            -lpjmedia-videodev-x86_64-apple-darwin21.6.0 \
-            -lpjmedia-audiodev-x86_64-apple-darwin21.6.0 \
-            -lpjmedia-x86_64-apple-darwin21.6.0 \
-            -lpjnath-x86_64-apple-darwin21.6.0 \
-            -lpjlib-util-x86_64-apple-darwin21.6.0 \
-            -lsrtp-x86_64-apple-darwin21.6.0 \
-            -lresample-x86_64-apple-darwin21.6.0 \
-            -lgsmcodec-x86_64-apple-darwin21.6.0 \
-            -lspeex-x86_64-apple-darwin21.6.0 \
-            -lilbccodec-x86_64-apple-darwin21.6.0 \
-            -lg7221codec-x86_64-apple-darwin21.6.0 \
-            -lyuv-x86_64-apple-darwin21.6.0 \
-            -lwebrtc-x86_64-apple-darwin21.6.0 \
-            -lpj-x86_64-apple-darwin21.6.0 \
+            -lpjsua-x86_64-apple-darwin22.6.0 \
+            -lpjsip-ua-x86_64-apple-darwin22.6.0 \
+            -lpjsip-simple-x86_64-apple-darwin22.6.0 \
+            -lpjsip-x86_64-apple-darwin22.6.0 \
+            -lpjmedia-codec-x86_64-apple-darwin22.6.0 \
+            -lpjmedia-x86_64-apple-darwin22.6.0 \
+            -lpjmedia-videodev-x86_64-apple-darwin22.6.0 \
+            -lpjmedia-audiodev-x86_64-apple-darwin22.6.0 \
+            -lpjmedia-x86_64-apple-darwin22.6.0 \
+            -lpjnath-x86_64-apple-darwin22.6.0 \
+            -lpjlib-util-x86_64-apple-darwin22.6.0 \
+            -lsrtp-x86_64-apple-darwin22.6.0 \
+            -lresample-x86_64-apple-darwin22.6.0 \
+            -lgsmcodec-x86_64-apple-darwin22.6.0 \
+            -lspeex-x86_64-apple-darwin22.6.0 \
+            -lilbccodec-x86_64-apple-darwin22.6.0 \
+            -lg7221codec-x86_64-apple-darwin22.6.0 \
+            -lyuv-x86_64-apple-darwin22.6.0 \
+            -lwebrtc-x86_64-apple-darwin22.6.0 \
+            -lpj-x86_64-apple-darwin22.6.0 \
             -lm \
             -lpthread \
             -lopus \
