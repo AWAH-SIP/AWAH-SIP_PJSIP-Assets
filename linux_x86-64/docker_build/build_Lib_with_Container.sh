@@ -1,5 +1,4 @@
 #!/bin/bash
-
 cd pjproject
 ./configure --prefix=/home/root/linux_x86-64
 make -j$(nproc)
