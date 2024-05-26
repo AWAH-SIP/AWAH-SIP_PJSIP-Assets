@@ -1,4 +1,3 @@
-/* $Id$ */
 /* 
  * Copyright (C) 2008-2011 Teluu Inc. (http://www.teluu.com)
  * Copyright (C) 2003-2008 Benny Prijono <benny@prijono.org>
@@ -127,12 +126,12 @@ enum pjmedia_video_pt
     PJMEDIA_RTP_PT_H264_RSV3, /* used by ffmpeg avcodec     */
     PJMEDIA_RTP_PT_H264_RSV4,
 
-    PJMEDIA_RTP_PT_VP8,      /* used by VPX                */
-    PJMEDIA_RTP_PT_VP8_RSV1, /* used by MediaCodec         */
-    PJMEDIA_RTP_PT_VP8_RSV2,
-    PJMEDIA_RTP_PT_VP9,      /* used by VPX                */
-    PJMEDIA_RTP_PT_VP9_RSV1, /* used by MediaCodec         */
-    PJMEDIA_RTP_PT_VP9_RSV2,
+     PJMEDIA_RTP_PT_VP8,        /* used by VPX                */
+     PJMEDIA_RTP_PT_VP8_RSV1,   /* used by MediaCodec         */
+     PJMEDIA_RTP_PT_VP8_RSV2,   /* used by ffmpeg avcodec     */
+     PJMEDIA_RTP_PT_VP9,        /* used by VPX                */
+     PJMEDIA_RTP_PT_VP9_RSV1,   /* used by MediaCodec         */
+     PJMEDIA_RTP_PT_VP9_RSV2,   /* used by ffmpeg avcodec     */
 
     /* Caution!
       * Ensure the value of the last pt above is <= 127.
@@ -143,4 +142,5 @@ enum pjmedia_video_pt
  * @}
  */
 
-#endif /* __PJMEDIA_CODEC_TYPES_H__ */
+
+#endif  /* __PJMEDIA_CODEC_TYPES_H__ */
