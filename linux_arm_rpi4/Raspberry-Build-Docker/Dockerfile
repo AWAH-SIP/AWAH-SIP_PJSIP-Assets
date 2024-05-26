@@ -39,6 +39,7 @@ RUN apt-get update && apt-get -y dist-upgrade && apt-get -y --no-install-recomme
 	# bash needed for argument substitution in entrypoint
 	bash \
 	uuid uuid-dev \
+	libssl-dev \
 	libasound2-dev \
 	libopus-dev \
 	libopencore-amrwb-dev \
