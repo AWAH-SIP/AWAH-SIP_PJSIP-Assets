@@ -19,7 +19,7 @@ jobs:
         registry: ghcr.io
         image: ghcr.io/awah-sip/awah-linux-build:latest
         options: -v ${{ github.workspace }}:/home/root --privileged
-        run: ls -la && ./linux_x86-64/docker_build/build_Lib_with_Container.sh
+        run: ls -la linux_x86-64/docker_build && ./linux_x86-64/docker_build/build_Lib_with_Container.sh
     - name: Commit Libs
       continue-on-error: true
       run: |
