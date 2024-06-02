@@ -12,28 +12,28 @@ INCLUDEPATH += $$PWD/include \
             -L/opt/homebrew/Cellar/opus/1.5.2/lib \
             -L/opt/homebrew/Cellar/opencore-amr/0.1.6/lib \
             -L/opt/homebrew/opt/openssl@1.1/lib \
-            -lpjsua2-x86_64-arm-apple-darwin21.2.0 \
+            -lpjsua2-x86_64-arm-apple-darwin23.5.0 \
             -lstdc++ \
-            -lpjsua-x86_64-arm-apple-darwin21.2.0 \
-            -lpjsip-ua-x86_64-arm-apple-darwin21.2.0 \
-            -lpjsip-simple-x86_64-arm-apple-darwin21.2.0 \
-            -lpjsip-x86_64-arm-apple-darwin21.2.0 \
-            -lpjmedia-codec-x86_64-arm-apple-darwin21.2.0 \
-            -lpjmedia-x86_64-arm-apple-darwin21.2.0 \
-            -lpjmedia-videodev-x86_64-arm-apple-darwin21.2.0 \
-            -lpjmedia-audiodev-x86_64-arm-apple-darwin21.2.0 \
-            -lpjmedia-x86_64-arm-apple-darwin21.2.0 \
-            -lpjnath-x86_64-arm-apple-darwin21.2.0 \
-            -lpjlib-util-x86_64-arm-apple-darwin21.2.0 \
-            -lsrtp-x86_64-arm-apple-darwin21.2.0 \
-            -lresample-x86_64-arm-apple-darwin21.2.0 \
-            -lgsmcodec-x86_64-arm-apple-darwin21.2.0 \
-            -lspeex-x86_64-arm-apple-darwin21.2.0 \
-            -lilbccodec-x86_64-arm-apple-darwin21.2.0 \
-            -lg7221codec-x86_64-arm-apple-darwin21.2.0 \
-            -lyuv-x86_64-arm-apple-darwin21.2.0 \
-            -lwebrtc-x86_64-arm-apple-darwin21.2.0 \
-            -lpj-x86_64-arm-apple-darwin21.2.0 \
+            -lpjsua-x86_64-arm-apple-darwin23.5.0 \
+            -lpjsip-ua-x86_64-arm-apple-darwin23.5.0 \
+            -lpjsip-simple-x86_64-arm-apple-darwin23.5.0 \
+            -lpjsip-x86_64-arm-apple-darwin23.5.0 \
+            -lpjmedia-codec-x86_64-arm-apple-darwin23.5.0 \
+            -lpjmedia-x86_64-arm-apple-darwin23.5.0 \
+            -lpjmedia-videodev-x86_64-arm-apple-darwin23.5.0 \
+            -lpjmedia-audiodev-x86_64-arm-apple-darwin23.5.0 \
+            -lpjmedia-x86_64-arm-apple-darwin23.5.0 \
+            -lpjnath-x86_64-arm-apple-darwin23.5.0 \
+            -lpjlib-util-x86_64-arm-apple-darwin23.5.0 \
+            -lsrtp-x86_64-arm-apple-darwin23.5.0 \
+            -lresample-x86_64-arm-apple-darwin23.5.0 \
+            -lgsmcodec-x86_64-arm-apple-darwin23.5.0 \
+            -lspeex-x86_64-arm-apple-darwin23.5.0 \
+            -lilbccodec-x86_64-arm-apple-darwin23.5.0 \
+            -lg7221codec-x86_64-arm-apple-darwin23.5.0 \
+            -lyuv-x86_64-arm-apple-darwin23.5.0 \
+            -lwebrtc-x86_64-arm-apple-darwin23.5.0 \
+            -lpj-x86_64-arm-apple-darwin23.5.0 \
             -lm \
             -lpthread \
             -lopus \
