@@ -71,7 +71,7 @@
 
 /* OpenCORE AMR-NB codec */
 #ifndef PJMEDIA_HAS_OPENCORE_AMRNB_CODEC
-#define PJMEDIA_HAS_OPENCORE_AMRNB_CODEC 0
+#define PJMEDIA_HAS_OPENCORE_AMRNB_CODEC 1
 #endif
 
 /* OpenCORE AMR-WB codec */
@@ -86,7 +86,7 @@
 
 /* OPUS codec */
 #ifndef PJMEDIA_HAS_OPUS_CODEC
-#define PJMEDIA_HAS_OPUS_CODEC 0
+#define PJMEDIA_HAS_OPUS_CODEC 1
 #endif
 
 /* G.729 codec with BCG729 backend */
