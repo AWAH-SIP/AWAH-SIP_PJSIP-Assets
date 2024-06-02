@@ -30,7 +30,7 @@ jobs:
         git commit -m "Github Actions updated PJSIP-Libraries for linux_x86-64"
         git push
 
-  build-pjsip-mac:
+  build-pjsip-mac-x86:
     runs-on: macos-13
     steps:
     - uses: actions/checkout@v4
@@ -60,6 +60,38 @@ jobs:
         git pull
         git add mac_x86-64/\*
         git commit -m "Github Actions updated PJSIP-Libraries for mac_x86-64"
+        git push
+
+  build-pjsip-mac-arm:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+    - name: install dependencies
+      run: brew install opencore-amr opus openssl@1.1
+    - name: configure
+      working-directory: ./pjproject
+      run: CFLAGS="-I/usr/local/include -I/opt/homebrew/opt/openssl@1.1/include" LDFLAGS="-L/usr/local/lib -L/opt/homebrew/opt/openssl@1.1/lib" ./configure --prefix=$PWD/../mac_arm
+    - name: make
+      working-directory: ./pjproject
+      run: make
+    - name: delete previous lib
+      continue-on-error: true
+      run: |
+        rm -r mac_arm/lib
+        rm -r mac_arm/include
+    - name: make install
+      working-directory: ./pjproject
+      run: make install
+    - name: Commit Libs
+      continue-on-error: true
+      run: |
+        git config --global user.name 'AWAH-SIP_CI'
+        git config --global user.email 'AWAH-SIP@users.noreply.github.com'
+        git pull
+        git add mac_arm/\*
+        git commit -m "Github Actions updated PJSIP-Libraries for mac_arm"
         git push
 
   build-pjsip-windows:

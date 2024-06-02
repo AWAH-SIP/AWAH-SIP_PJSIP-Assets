@@ -4,12 +4,12 @@ QMAKE_APPLE_DEVICE_ARCHS = arm64
 
 INCLUDEPATH += $$PWD/include \
                 /opt/homebrew/opt/openssl@1.1/include \
-                /opt/homebrew/Cellar/opus/1.3.1/include \
-                /opt/homebrew/Cellar/opencore-amr/0.1.5/include
+                /opt/homebrew/Cellar/opus/1.5.2/include \
+                /opt/homebrew/Cellar/opencore-amr/0.1.6/include
 
     LIBS += \
             -L$$PWD/lib \
-            -L/opt/homebrew/Cellar/opus/1.3.1/lib \
+            -L/opt/homebrew/Cellar/opus/1.5.2/lib \
             -L/opt/homebrew/Cellar/opencore-amr/0.1.6/lib \
             -L/opt/homebrew/opt/openssl@1.1/lib \
             -lpjsua2-x86_64-arm-apple-darwin21.2.0 \
