@@ -21,6 +21,20 @@ if [ "$1" = "build" ]; then
         make -j4
         make install
 	fi
+elif [ "$1" = "build-codec" ]; then
+	echo "Starting to build the AWAH-SIP_Codec for RPi..."
+	if [ -z "$(ls -A $APP_SRCDIR)" ]; then
+		echo "Mount point ${APP_SRCDIR} is empty, did you invoke the container with \"docker run --rm -v /path/to/awah-sip/codec:/var/build build\"?"
+		exit 0
+	else
+ 		mkdir -p $APP_BUILDDIR
+		cd $APP_SRCDIR
+  	export PATH=$PATH:/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin
+        export CPPFLAGS="-I/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/7.4.1/include -I/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/include -I/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/usr/include -I/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/include -I/sysroot/opt/vc/include -I/sysroot/usr/lib/gcc/arm-linux-gnueabihf/8/include -I/sysroot/usr/include"
+	
+	qmake CONFIG+=release PREFIX=$APP_BUILDDIR CROSS_COMPILE="/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-" CC="/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc" LD="/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf-gcc"  CFLAGS+="-march=armv8-a -mtune=cortex-a72 -mfpu=crypto-neon-fp-armv8 -mfloat-abi=hard --sysroot=/sysroot" LDFLAGS+="-L/src/gcc-linaro-7.4.1-2019.02-x86_64_arm-linux-gnueabihf/arm-linux-gnueabihf/libc/lib -L/sysroot/lib/arm-linux-gnueabihf -ldl -lc  --sysroot=/sysroot" ../AWAH-SIP_Codec.pro
+	make -j$(nproc)
+	make INSTALL_ROOT=appdir -j$(nproc) install
 else
 	cd ~
 	echo "If you wanted to use the container to build a PJSIP project, you have to invoke the container with command \"build\" and mount the project to /var/build"
