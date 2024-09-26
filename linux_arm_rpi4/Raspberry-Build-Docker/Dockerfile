@@ -1,4 +1,4 @@
-FROM --platform=linux/arm/v7 balenalib/rpi-raspbian:buster as raspi
+FROM --platform=linux/arm/v7 balenalib/rpi-raspbian:bookworm as raspi
 
 LABEL maintainer="AWAH-SIP@users.noreply.github.com"
 LABEL stage=qt-raspberry-base
