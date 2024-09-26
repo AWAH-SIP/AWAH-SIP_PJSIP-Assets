@@ -24,7 +24,7 @@ RUN apt-get update && apt-get -y dist-upgrade && apt-get -y --no-install-recomme
 	# sudo to be able to modify the container as the user, if needed.
 	sudo \
 	curl \
-	python \
+	python3 \
 	gperf \
 	bison \
 	flex \
@@ -92,7 +92,7 @@ RUN apt-get update && apt-get -y dist-upgrade && apt-get -y --no-install-recomme
 	# sudo to be able to modify the container as the user, if needed.
 	sudo \
 	curl \
-	python \
+	python3 \
 	gperf \
 	bison \
 	flex \
