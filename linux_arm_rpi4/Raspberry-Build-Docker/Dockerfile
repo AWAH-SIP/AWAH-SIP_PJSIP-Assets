@@ -25,6 +25,7 @@ RUN apt-get update && apt-get -y dist-upgrade && apt-get -y --no-install-recomme
 	sudo \
 	curl \
 	python3 \
+ 	python-is-python3 \
 	gperf \
 	bison \
 	flex \
@@ -93,6 +94,7 @@ RUN apt-get update && apt-get -y dist-upgrade && apt-get -y --no-install-recomme
 	sudo \
 	curl \
 	python3 \
+ 	python-is-python3 \
 	gperf \
 	bison \
 	flex \
