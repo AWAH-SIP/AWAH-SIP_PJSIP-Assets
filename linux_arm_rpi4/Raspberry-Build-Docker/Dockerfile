@@ -25,7 +25,6 @@ RUN apt-get update && apt-get -y dist-upgrade && apt-get -y --no-install-recomme
 	sudo \
 	curl \
 	python3 \
- 	python-is-python3 \
 	gperf \
 	bison \
 	flex \
@@ -94,7 +93,6 @@ RUN apt-get update && apt-get -y dist-upgrade && apt-get -y --no-install-recomme
 	sudo \
 	curl \
 	python3 \
- 	python-is-python3 \
 	gperf \
 	bison \
 	flex \
@@ -156,7 +154,7 @@ COPY --from=raspi /lib/ /sysroot/lib/
 COPY --from=raspi /usr/include/ /sysroot/usr/include/
 COPY --from=raspi /usr/lib/ /sysroot/usr/lib/
 COPY --from=raspi /opt/vc/ /sysroot/opt/vc/
-RUN /usr/local/bin/sysroot-relativelinks.py /sysroot
+RUN ln -s /usr/bin/python3 /usr/bin/python && /usr/local/bin/sysroot-relativelinks.py /sysroot
 
 # Download Cross-Compile Tool
 WORKDIR /src
